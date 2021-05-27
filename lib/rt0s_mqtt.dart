@@ -264,11 +264,11 @@ class MQTTapi {
           .authenticateAs(_user, _pw)
           .withClientIdentifier(_id)
           .keepAliveFor(_ping)
-          .withWillRetain()
-          .startClean() // Non persistent session for testing
-          //.withWillMessage(encoder.convert({"state": "off"}))
-          .withWillTopic("/bc/$_id/state")
-          .withWillQos(MqttQos.exactlyOnce);
+          //.withWillRetain()
+          .startClean(); // Non persistent session for testing
+      //.withWillMessage(encoder.convert({"state": "off"}))
+      //.withWillTopic("/bc/$_id/state")
+      //.withWillQos(MqttQos.exactlyOnce);
       done = true;
       print('MQTTapi connecting.... xx');
       client.autoReconnect = true;
