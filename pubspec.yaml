@@ -1,0 +1,18 @@
+name: rt0s_mqtt
+description: Minimal MQTT API implementation
+version: 0.0.1
+author:
+homepage:
+
+environment:                                                            
+  sdk: '>=2.1.0 <3.0.0'    
+
+dependencies:
+  mqtt_client: ^8.2.0
+  uuid: 2.0.4
+
+dev_dependencies:
+  # flutter_test:
+  #   sdk: flutter
+
+flutter:
