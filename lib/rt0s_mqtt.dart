@@ -266,7 +266,7 @@ class MQTTapi {
           .keepAliveFor(_ping)
           .withWillRetain()
           .startClean() // Non persistent session for testing
-          .withWillMessage(encoder.convert({"state": "off"}))
+          //.withWillMessage(encoder.convert({"state": "off"}))
           .withWillTopic("/bc/$_id/state")
           .withWillQos(MqttQos.exactlyOnce);
       done = true;
